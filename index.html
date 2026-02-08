@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIFA Electricals</title>
+    <title>SIFA Electricals - Premium LED Lighting Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
@@ -20,7 +20,9 @@
             --secondary: #3498db;
             --accent: #e74c3c;
             --light: #ecf0f1;
+            --dark: #2c3e50;
             --success: #27ae60;
+            --warning: #f39c12;
             --danger: #e74c3c;
         }
 
@@ -67,6 +69,10 @@
         .logo h1 {
             font-size: 1.8rem;
             font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--secondary);
         }
 
         nav ul {
@@ -119,6 +125,7 @@
             color: white;
             text-align: center;
             padding: 6rem 0;
+            margin-bottom: 3rem;
         }
 
         .hero h2 {
@@ -137,7 +144,6 @@
         }
 
         .cta-button:hover {
-            background-color: var(--accent);
             opacity: 0.8;
         }
 
@@ -146,6 +152,66 @@
             margin: 3rem 0;
             font-size: 2.5rem;
             color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 1rem auto 0;
+        }
+
+        .about {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         .products {
@@ -173,7 +239,6 @@
         .category-btn.active {
             background-color: var(--secondary);
             color: white;
-            border-color: var(--secondary);
         }
 
         .products-grid {
@@ -187,11 +252,11 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .product-image {
@@ -204,6 +269,12 @@
             color: var(--secondary);
         }
 
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .product-content {
             padding: 1.5rem;
         }
@@ -214,11 +285,19 @@
             color: var(--primary);
         }
 
+        .product-specs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
         .product-price {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent);
-            margin: 1rem 0;
+            margin-bottom: 1rem;
         }
 
         .btn {
@@ -234,6 +313,11 @@
         .btn-primary {
             background-color: var(--secondary);
             color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
         }
 
         .btn-danger {
@@ -258,12 +342,145 @@
         }
 
         .form-group input,
+        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .dealer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefit-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .dealer-form-container {
+            background-color: #f5f7fa;
+            padding: 3rem;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-right: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
         }
 
         .notification {
@@ -297,6 +514,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             align-items: center;
             justify-content: center;
+            overflow-y: auto;
         }
 
         .modal.active {
@@ -330,11 +548,14 @@
             font-weight: 700;
         }
 
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -344,15 +565,20 @@
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-lightbulb"></i>
-                <h1>SIFA <span style="color: var(--secondary);">Electricals</span></h1>
+                <h1>SIFA <span>Electricals</span></h1>
             </div>
+
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="#dealers">Dealers</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" onclick="openAdmin(event)" style="cursor: pointer;">Admin</a></li>
+                    <li><a href="#" onclick="openAdmin(event)">Admin</a></li>
                 </ul>
             </nav>
+
             <div class="sync-indicator">
                 <span class="sync-dot" id="syncDot"></span>
                 <span id="syncStatus">Connecting...</span>
@@ -360,11 +586,49 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <h2>Premium LED Lighting Solutions</h2>
-            <p>Energy-efficient, high-quality LED products</p>
-            <a href="#products" class="cta-button">View Products</a>
+            <p>Energy-efficient, high-quality LED products for homes and businesses.</p>
+            <a href="#products" class="cta-button">View Our Products</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About SIFA Electricals</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Vision</h3>
+                    <p>Our vision is to provide high-quality, energy-efficient LED lighting solutions to businesses and households.</p>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Established</h4>
+                            <p>2025</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Location</h4>
+                            <p>Kota, Rajasthan</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Team</h4>
+                            <p>6-20</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Products</h4>
+                            <p>LED</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SIFA">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -384,50 +648,167 @@
         </div>
     </section>
 
-    <section style="padding: 4rem 0;">
+    <section style="padding: 4rem 0; background-color: white;" id="dealers">
         <div class="container">
-            <h2 class="section-title">Dealers</h2>
-            <form id="dealerForm" style="max-width: 600px; margin: 0 auto;">
-                <div class="form-group">
-                    <label>Name *</label>
-                    <input type="text" id="dealerName" required>
+            <h2 class="section-title">Dealers & Distributors</h2>
+
+            <div class="dealer-benefits">
+                <div class="benefit-card">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Better Profit</h3>
                 </div>
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" id="dealerPhone" required>
+                <div class="benefit-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Delivery</h3>
                 </div>
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" id="dealerEmail" required>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support</h3>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Submit</button>
-            </form>
+                <div class="benefit-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Quality</h3>
+                </div>
+            </div>
+
+            <div class="dealer-form-container">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Become a Dealer</h3>
+                <form id="dealerForm">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" id="dealerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Business *</label>
+                        <input type="text" id="dealerBusiness" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" id="dealerPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="dealerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Location *</label>
+                        <input type="text" id="dealerLocation" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0; background-color: #f5f7fa;" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+            </div>
         </div>
     </section>
 
     <section style="padding: 4rem 0; background-color: white;" id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
-                <div class="form-group">
-                    <label>Name *</label>
-                    <input type="text" id="contactName" required>
+            <h2 class="section-title">Contact Us</h2>
+
+            <div class="contact-container">
+                <div>
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Kota, Rajasthan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 XXXXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@sifaelectricals.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" id="contactPhone" required>
+
+                <div>
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Name *</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="tel" id="contactPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="contactEmail">
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea id="contactMessage" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>Message *</label>
-                    <textarea id="contactMessage" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send</button>
-            </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 SIFA Electricals. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SIFA Electricals</h3>
+                    <p>Premium LED lighting solutions</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SIFA Electricals. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Password Modal -->
@@ -435,29 +816,28 @@
         <div class="modal-content" style="max-width: 400px;">
             <h2>Admin Access</h2>
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" id="adminPassword">
+                <input type="password" id="adminPassword" placeholder="Password">
             </div>
-            <button class="btn btn-success" onclick="verifyPassword()" style="width: 100%; padding: 0.8rem;">Login</button>
-            <button class="btn btn-danger" onclick="closePassword()" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">Cancel</button>
+            <button class="btn btn-success" onclick="verifyPassword()" style="width: 100%; margin-bottom: 0.5rem;">Login</button>
+            <button class="btn btn-danger" onclick="closePassword()" style="width: 100%;">Cancel</button>
         </div>
     </div>
 
     <!-- Admin Modal -->
     <div id="adminModal" class="modal">
-        <div class="modal-content" style="max-width: 1200px;">
+        <div class="modal-content" style="max-width: 1200px; width: 95%; margin: 20px auto;">
             <h2>Admin Panel <button onclick="closeAdmin()" style="float: right; border: none; background: none; font-size: 1.5rem; cursor: pointer;">×</button></h2>
             
-            <div style="margin-top: 2rem;">
-                <button onclick="showTab('products')" class="btn btn-primary" style="margin-right: 0.5rem;">Products</button>
-                <button onclick="showTab('dealers')" class="btn btn-primary" style="margin-right: 0.5rem;">Dealers</button>
-                <button onclick="showTab('messages')" class="btn btn-primary">Messages</button>
+            <div style="margin: 2rem 0;">
+                <button onclick="showTab('products')" class="btn btn-primary" style="margin-right: 0.5rem; width: auto; padding: 0.8rem 1.5rem;">Products</button>
+                <button onclick="showTab('dealers')" class="btn btn-primary" style="margin-right: 0.5rem; width: auto; padding: 0.8rem 1.5rem;">Dealers</button>
+                <button onclick="showTab('messages')" class="btn btn-primary" style="width: auto; padding: 0.8rem 1.5rem;">Messages</button>
             </div>
 
             <!-- Products Tab -->
-            <div id="products-tab" style="display: block; margin-top: 2rem;">
+            <div id="products-tab" style="display: block;">
                 <h3>Add Product</h3>
-                <form id="productForm" style="margin-bottom: 2rem;">
+                <form id="productForm" style="margin-bottom: 2rem; max-width: 600px;">
                     <div class="form-group">
                         <label>Name *</label>
                         <input type="text" id="productName" required>
@@ -471,13 +851,17 @@
                         <input type="number" id="productPrice" step="0.01" required>
                     </div>
                     <div class="form-group">
+                        <label>MOQ</label>
+                        <input type="number" id="productMoq">
+                    </div>
+                    <div class="form-group">
                         <label>Category</label>
-                        <select id="productCategory" style="width: 100%; padding: 0.8rem;">
+                        <select id="productCategory">
                             <option value="color">Color</option>
                             <option value="gamma">Gamma</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-success" style="width: 100%; padding: 0.8rem;">Add</button>
+                    <button type="submit" class="btn btn-success">Add Product</button>
                 </form>
 
                 <h3>Products List</h3>
@@ -494,13 +878,14 @@
             </div>
 
             <!-- Dealers Tab -->
-            <div id="dealers-tab" style="display: none; margin-top: 2rem;">
+            <div id="dealers-tab" style="display: none;">
                 <h3>Dealer Inquiries</h3>
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Phone</th>
+                            <th>Email</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -509,8 +894,8 @@
             </div>
 
             <!-- Messages Tab -->
-            <div id="messages-tab" style="display: none; margin-top: 2rem;">
-                <h3>Messages</h3>
+            <div id="messages-tab" style="display: none;">
+                <h3>Contact Messages</h3>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -527,6 +912,7 @@
     </div>
 
     <script>
+        // SUPABASE CONFIG
         const SUPABASE_URL = 'https://nzkpbehlbjheftyeskwu.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a3BiZWhsYmpoZWZ0eWVza3d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA1NjcwNDksImV4cCI6MjA4NjE0MzA0OX0.Ul-7C6TbbJQYOo_SKlYiUfNVWOI2PbDikcxhRd-oy98';
 
@@ -545,7 +931,7 @@
                     setupRealtime();
                 }
             } catch (err) {
-                console.error('Connection error:', err);
+                console.error('Error:', err);
                 updateSync('offline');
             }
         }
@@ -564,8 +950,8 @@
 
         function setupRealtime() {
             db.channel('all').on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => loadProducts()).subscribe();
-            db.channel('dealers-ch').on('postgres_changes', { event: '*', schema: 'public', table: 'dealer_inquiries' }, () => loadDealers()).subscribe();
-            db.channel('msg-ch').on('postgres_changes', { event: '*', schema: 'public', table: 'contact_messages' }, () => loadMessages()).subscribe();
+            db.channel('dealers').on('postgres_changes', { event: '*', schema: 'public', table: 'dealer_inquiries' }, () => loadDealers()).subscribe();
+            db.channel('messages').on('postgres_changes', { event: '*', schema: 'public', table: 'contact_messages' }, () => loadMessages()).subscribe();
         }
 
         async function loadProducts() {
@@ -583,9 +969,9 @@
                     <div class="product-image"><i class="fas fa-lightbulb"></i></div>
                     <div class="product-content">
                         <h3>${p.name}</h3>
-                        <p>${p.watt || 'N/A'}</p>
+                        <div class="product-specs"><span>${p.watt}</span> <span>MOQ: ${p.moq}</span></div>
                         <div class="product-price">₹${parseFloat(p.price).toFixed(2)}</div>
-                        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire</a>
+                        <a href="#contact" class="btn btn-primary">Enquire</a>
                     </div>
                 </div>
             `).join('');
@@ -613,6 +999,7 @@
                 name: document.getElementById('productName').value,
                 watt: document.getElementById('productWatt').value,
                 price: parseFloat(document.getElementById('productPrice').value),
+                moq: parseInt(document.getElementById('productMoq').value) || null,
                 category: document.getElementById('productCategory').value
             }]);
             if (!error) {
@@ -627,6 +1014,7 @@
                 <tr>
                     <td>${d.name}</td>
                     <td>${d.phone}</td>
+                    <td>${d.email}</td>
                     <td><button class="btn btn-danger" onclick="deleteDealer(${d.id})">Delete</button></td>
                 </tr>
             `).join('');
@@ -660,8 +1048,10 @@
             e.preventDefault();
             const { error } = await db.from('dealer_inquiries').insert([{
                 name: document.getElementById('dealerName').value,
+                business: document.getElementById('dealerBusiness').value,
                 phone: document.getElementById('dealerPhone').value,
-                email: document.getElementById('dealerEmail').value
+                email: document.getElementById('dealerEmail').value,
+                location: document.getElementById('dealerLocation').value
             }]);
             if (!error) {
                 showNotification('✅ Application sent!');
@@ -674,6 +1064,7 @@
             const { error } = await db.from('contact_messages').insert([{
                 name: document.getElementById('contactName').value,
                 phone: document.getElementById('contactPhone').value,
+                email: document.getElementById('contactEmail').value,
                 message: document.getElementById('contactMessage').value
             }]);
             if (!error) {
@@ -697,7 +1088,7 @@
 
         function verifyPassword() {
             if (document.getElementById('adminPassword').value === 'admin123') {
-                document.getElementById('passwordModal').classList.remove('active');
+                closePassword();
                 document.getElementById('adminModal').classList.add('active');
                 loadProducts();
                 loadDealers();
@@ -737,5 +1128,4 @@
         init();
     </script>
 </body>
-
 </html>
