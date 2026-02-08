@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIFA Electricals - Premium LED Lighting Solutions</title>
+    <title>SIFA Electricals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
@@ -20,9 +20,7 @@
             --secondary: #3498db;
             --accent: #e74c3c;
             --light: #ecf0f1;
-            --dark: #2c3e50;
             --success: #27ae60;
-            --warning: #f39c12;
             --danger: #e74c3c;
         }
 
@@ -71,10 +69,6 @@
             font-weight: 700;
         }
 
-        .logo span {
-            color: var(--secondary);
-        }
-
         nav ul {
             display: flex;
             list-style: none;
@@ -85,42 +79,14 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            padding: 0.5rem 0;
-            transition: all 0.3s ease;
-            position: relative;
         }
 
         nav a:hover {
             color: var(--secondary);
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: var(--secondary);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
         .sync-indicator {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 8px;
             padding: 0.5rem 1rem;
@@ -150,24 +116,14 @@
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
-            background-position: center;
             color: white;
             text-align: center;
             padding: 6rem 0;
-            margin-bottom: 3rem;
         }
 
         .hero h2 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
         }
 
         .cta-button {
@@ -178,93 +134,18 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent);
-            cursor: pointer;
         }
 
         .cta-button:hover {
-            background-color: transparent;
-            color: var(--accent);
+            background-color: var(--accent);
+            opacity: 0.8;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary);
-            position: relative;
-            padding-bottom: 15px;
+            margin: 3rem 0;
             font-size: 2.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-        }
-
-        .about {
-            padding: 4rem 0;
-            background-color: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
             color: var(--primary);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .about-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .info-item {
-            background-color: var(--light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .info-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .info-item i {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 0.8rem;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .products {
@@ -287,11 +168,9 @@
             border-radius: 50px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s ease;
         }
 
-        .category-btn.active,
-        .category-btn:hover {
+        .category-btn.active {
             background-color: var(--secondary);
             color: white;
             border-color: var(--secondary);
@@ -308,7 +187,6 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product-card:hover {
@@ -324,17 +202,6 @@
             justify-content: center;
             font-size: 4rem;
             color: var(--secondary);
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .product-image i {
-            font-size: 3.5rem;
         }
 
         .product-content {
@@ -347,24 +214,11 @@
             color: var(--primary);
         }
 
-        .product-specs {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
         .product-price {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 0.5rem;
+            margin: 1rem 0;
         }
 
         .btn {
@@ -373,11 +227,8 @@
             border: none;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            flex: 1;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
         }
 
         .btn-primary {
@@ -385,74 +236,14 @@
             color: white;
         }
 
-        .btn-primary:hover {
-            background-color: #2980b9;
-        }
-
-        .btn-secondary {
-            background-color: var(--light);
-            color: var(--dark);
-        }
-
-        .btn-secondary:hover {
-            background-color: #d5dbdb;
-        }
-
-        .btn-success {
-            background-color: var(--success);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background-color: #229954;
-        }
-
         .btn-danger {
             background-color: var(--danger);
             color: white;
         }
 
-        .btn-danger:hover {
-            background-color: #c0392b;
-        }
-
-        .dealers {
-            padding: 4rem 0;
-            background-color: white;
-        }
-
-        .dealer-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .benefit-card {
-            background-color: var(--light);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-card i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .dealer-form-container {
-            background-color: #f5f7fa;
-            padding: 3rem;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 0 auto;
+        .btn-success {
+            background-color: var(--success);
+            color: white;
         }
 
         .form-group {
@@ -467,159 +258,12 @@
         }
 
         .form-group input,
-        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .gallery {
-            padding: 4rem 0;
-            background-color: #f5f7fa;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            height: 200px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .contact {
-            padding: 4rem 0;
-            background-color: white;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item i {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-right: 1rem;
-            margin-top: 0.3rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-5px);
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-            font-size: 0.9rem;
         }
 
         .notification {
@@ -631,34 +275,18 @@
             color: white;
             z-index: 5000;
             animation: slideIn 0.3s ease;
-            max-width: 400px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .notification.success {
             background-color: var(--success);
         }
 
-        .notification.error {
-            background-color: var(--danger);
-        }
-
-        .notification.info {
-            background-color: var(--secondary);
-        }
-
         @keyframes slideIn {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(400px); }
+            to { transform: translateX(0); }
         }
 
-        .admin-modal {
+        .modal {
             display: none;
             position: fixed;
             z-index: 2000;
@@ -667,101 +295,21 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            overflow-y: auto;
-        }
-
-        .admin-modal.active {
-            display: block;
-        }
-
-        .admin-container {
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        .admin-header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1.5rem 0;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1001;
+            justify-content: center;
         }
 
-        .admin-header .container {
+        .modal.active {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
         }
 
-        .admin-close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .admin-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 15px;
-        }
-
-        .admin-nav-tabs {
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #ddd;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .admin-nav-tab {
-            padding: 1rem 1.5rem;
-            background-color: white;
-            border: 2px solid #ddd;
-            border-bottom: none;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .admin-nav-tab.active {
-            background-color: var(--secondary);
-            color: white;
-            border-color: var(--secondary);
-        }
-
-        .admin-nav-tab:hover {
-            background-color: var(--secondary);
-            color: white;
-        }
-
-        .admin-tab-content {
-            display: none;
+        .modal-content {
             background-color: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-            margin-bottom: 2rem;
-        }
-
-        .admin-tab-content.active {
-            display: block;
-        }
-
-        .admin-tab-content h2 {
-            color: var(--primary);
-            margin-bottom: 2rem;
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         .data-table {
@@ -780,101 +328,13 @@
         .data-table th {
             background-color: var(--light);
             font-weight: 700;
-            color: var(--primary);
         }
 
-        .data-table tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        .action-btns {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .password-modal {
-            display: none;
-            position: fixed;
-            z-index: 5000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            align-items: center;
-            justify-content: center;
-        }
-
-        .password-modal.active {
-            display: flex;
-        }
-
-        .password-modal-content {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            max-width: 400px;
-            width: 90%;
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
             text-align: center;
-        }
-
-        .password-modal-content h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .password-modal-content input {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .password-modal-content .btn {
-            width: 48%;
-            margin: 0 1%;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary);
-                padding: 1rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-
-            nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
         }
     </style>
 </head>
@@ -884,75 +344,27 @@
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-lightbulb"></i>
-                <h1>SIFA <span>Electricals</span></h1>
+                <h1>SIFA <span style="color: var(--secondary);">Electricals</span></h1>
             </div>
-
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <nav id="mainNav">
+            <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#dealers">Dealers</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" onclick="openAdminPanel(event)">Admin</a></li>
+                    <li><a href="#" onclick="openAdmin(event)" style="cursor: pointer;">Admin</a></li>
                 </ul>
             </nav>
-
-            <div class="sync-indicator" id="syncIndicator">
+            <div class="sync-indicator">
                 <span class="sync-dot" id="syncDot"></span>
                 <span id="syncStatus">Connecting...</span>
             </div>
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
             <h2>Premium LED Lighting Solutions</h2>
-            <p>Energy-efficient, high-quality LED products for homes and businesses.</p>
-            <a href="#products" class="cta-button">View Our Products</a>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About SIFA Electricals</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Vision</h3>
-                    <p>Our vision is to provide high-quality, energy-efficient, and sustainable LED lighting solutions to businesses and households across the market.</p>
-
-                    <div class="about-info">
-                        <div class="info-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <h4>Established</h4>
-                            <p>2025</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h4>Location</h4>
-                            <p>Kota, Rajasthan</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-users"></i>
-                            <h4>Team Size</h4>
-                            <p>6-20 Employees</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-bullseye"></i>
-                            <h4>Specialization</h4>
-                            <p>LED Lighting</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SIFA">
-                </div>
-            </div>
+            <p>Energy-efficient, high-quality LED products</p>
+            <a href="#products" class="cta-button">View Products</a>
         </div>
     </section>
 
@@ -962,11 +374,8 @@
 
             <div class="product-categories">
                 <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="color">Color Lighting</button>
-                <button class="category-btn" data-category="gamma">Gamma DOB</button>
-                <button class="category-btn" data-category="smart">Smart LED</button>
-                <button class="category-btn" data-category="music">Music Bulb</button>
-                <button class="category-btn" data-category="solar">Solar</button>
+                <button class="category-btn" data-category="color">Color</button>
+                <button class="category-btn" data-category="gamma">Gamma</button>
             </div>
 
             <div class="products-grid" id="productsContainer">
@@ -975,272 +384,144 @@
         </div>
     </section>
 
-    <section class="dealers" id="dealers">
+    <section style="padding: 4rem 0;">
         <div class="container">
-            <h2 class="section-title">Dealers & Distributors</h2>
-
-            <div class="dealer-benefits">
-                <div class="benefit-card">
-                    <i class="fas fa-percentage"></i>
-                    <h3>Better Profit Margins</h3>
+            <h2 class="section-title">Dealers</h2>
+            <form id="dealerForm" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="dealerName" required>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Timely Delivery</h3>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" id="dealerPhone" required>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Dedicated Support</h3>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="dealerEmail" required>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-medal"></i>
-                    <h3>Quality Assurance</h3>
-                </div>
-            </div>
-
-            <div class="dealer-form-container">
-                <h3>Become a Dealer</h3>
-                <form id="dealerForm">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" id="dealerName" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Business Name *</label>
-                        <input type="text" id="dealerBusiness" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone *</label>
-                        <input type="tel" id="dealerPhone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" id="dealerEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Location *</label>
-                        <input type="text" id="dealerLocation" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Submit</button>
-                </form>
-            </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Submit</button>
+            </form>
         </div>
     </section>
 
-    <section class="gallery" id="gallery">
+    <section style="padding: 4rem 0; background-color: white;" id="contact">
         <div class="container">
-            <h2 class="section-title">Our Gallery</h2>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h2 class="section-title">Contact</h2>
+            <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="contactName" required>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" id="contactPhone" required>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                <div class="form-group">
+                    <label>Message *</label>
+                    <textarea id="contactMessage" required></textarea>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Kota, Rajasthan</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 XXXXX XXXXX</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@sifaelectricals.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3>Send Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label>Your Name *</label>
-                            <input type="text" id="contactName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone *</label>
-                            <input type="tel" id="contactPhone" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" id="contactEmail">
-                        </div>
-                        <div class="form-group">
-                            <label>Message *</label>
-                            <textarea id="contactMessage" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send</button>
-                    </form>
-                </div>
-            </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>SIFA Electricals</h3>
-                    <p>Premium LED lighting solutions manufacturer</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 SIFA Electricals. All Rights Reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2025 SIFA Electricals. All Rights Reserved.</p>
     </footer>
 
-    <div id="passwordModal" class="password-modal">
-        <div class="password-modal-content">
-            <h2>🔒 Admin Access</h2>
-            <input type="password" id="adminPassword" placeholder="Password">
-            <button class="btn btn-success" onclick="verifyPassword()">Login</button>
-            <button class="btn btn-secondary" onclick="closePasswordModal()">Cancel</button>
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content" style="max-width: 400px;">
+            <h2>Admin Access</h2>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="adminPassword">
+            </div>
+            <button class="btn btn-success" onclick="verifyPassword()" style="width: 100%; padding: 0.8rem;">Login</button>
+            <button class="btn btn-danger" onclick="closePassword()" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">Cancel</button>
         </div>
     </div>
 
-    <div id="adminModal" class="admin-modal">
-        <div class="admin-container">
-            <div class="admin-header">
-                <div class="container">
-                    <h1>Admin Panel</h1>
-                    <button class="admin-close-btn" onclick="closeAdmin()">&times;</button>
-                </div>
+    <!-- Admin Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content" style="max-width: 1200px;">
+            <h2>Admin Panel <button onclick="closeAdmin()" style="float: right; border: none; background: none; font-size: 1.5rem; cursor: pointer;">×</button></h2>
+            
+            <div style="margin-top: 2rem;">
+                <button onclick="showTab('products')" class="btn btn-primary" style="margin-right: 0.5rem;">Products</button>
+                <button onclick="showTab('dealers')" class="btn btn-primary" style="margin-right: 0.5rem;">Dealers</button>
+                <button onclick="showTab('messages')" class="btn btn-primary">Messages</button>
             </div>
 
-            <div class="admin-content">
-                <div class="admin-nav-tabs">
-                    <button class="admin-nav-tab active" onclick="showTab('products')">Products</button>
-                    <button class="admin-nav-tab" onclick="showTab('dealers')">Dealers</button>
-                    <button class="admin-nav-tab" onclick="showTab('contacts')">Messages</button>
-                </div>
+            <!-- Products Tab -->
+            <div id="products-tab" style="display: block; margin-top: 2rem;">
+                <h3>Add Product</h3>
+                <form id="productForm" style="margin-bottom: 2rem;">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Watt</label>
+                        <input type="text" id="productWatt">
+                    </div>
+                    <div class="form-group">
+                        <label>Price *</label>
+                        <input type="number" id="productPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="productCategory" style="width: 100%; padding: 0.8rem;">
+                            <option value="color">Color</option>
+                            <option value="gamma">Gamma</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success" style="width: 100%; padding: 0.8rem;">Add</button>
+                </form>
 
-                <div id="products-tab" class="admin-tab-content active">
-                    <h2>Products</h2>
-                    <form id="productForm">
-                        <div class="form-group">
-                            <label>Name *</label>
-                            <input type="text" id="productName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Wattage</label>
-                            <input type="text" id="productWatt">
-                        </div>
-                        <div class="form-group">
-                            <label>Price *</label>
-                            <input type="number" id="productPrice" step="0.01" required>
-                        </div>
-                        <div class="form-group">
-                            <label>MOQ</label>
-                            <input type="number" id="productMoq">
-                        </div>
-                        <div class="form-group">
-                            <label>Category *</label>
-                            <select id="productCategory" required>
-                                <option value="color">Color Lighting</option>
-                                <option value="gamma">Gamma DOB</option>
-                                <option value="smart">Smart LED</option>
-                                <option value="music">Music Bulb</option>
-                                <option value="solar">Solar</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-success">Add Product</button>
-                    </form>
+                <h3>Products List</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTable"></tbody>
+                </table>
+            </div>
 
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Category</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="productsTable"></tbody>
-                    </table>
-                </div>
+            <!-- Dealers Tab -->
+            <div id="dealers-tab" style="display: none; margin-top: 2rem;">
+                <h3>Dealer Inquiries</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dealersTable"></tbody>
+                </table>
+            </div>
 
-                <div id="dealers-tab" class="admin-tab-content">
-                    <h2>Dealer Inquiries</h2>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dealersTable"></tbody>
-                    </table>
-                </div>
-
-                <div id="contacts-tab" class="admin-tab-content">
-                    <h2>Contact Messages</h2>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Message</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="contactsTable"></tbody>
-                    </table>
-                </div>
+            <!-- Messages Tab -->
+            <div id="messages-tab" style="display: none; margin-top: 2rem;">
+                <h3>Messages</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Message</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messagesTable"></tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -1248,16 +529,15 @@
     <script>
         const SUPABASE_URL = 'https://nzkpbehlbjheftyeskwu.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a3BiZWhsYmpoZWZ0eWVza3d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA1NjcwNDksImV4cCI6MjA4NjE0MzA0OX0.Ul-7C6TbbJQYOo_SKlYiUfNVWOI2PbDikcxhRd-oy98';
-        
-        // Fix: Only declare once
+
         const { createClient } = window.supabase;
-        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+        const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
         let isConnected = false;
 
         async function init() {
             try {
-                const { data, error } = await supabaseClient.from('products').select('count', { count: 'exact' });
+                const { data, error } = await db.from('products').select('count', { count: 'exact' });
                 if (!error) {
                     isConnected = true;
                     updateSync('connected');
@@ -1283,13 +563,13 @@
         }
 
         function setupRealtime() {
-            supabaseClient.channel('changes').on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => loadProducts()).subscribe();
-            supabaseClient.channel('dealers-changes').on('postgres_changes', { event: '*', schema: 'public', table: 'dealer_inquiries' }, () => loadDealers()).subscribe();
-            supabaseClient.channel('messages-changes').on('postgres_changes', { event: '*', schema: 'public', table: 'contact_messages' }, () => loadMessages()).subscribe();
+            db.channel('all').on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => loadProducts()).subscribe();
+            db.channel('dealers-ch').on('postgres_changes', { event: '*', schema: 'public', table: 'dealer_inquiries' }, () => loadDealers()).subscribe();
+            db.channel('msg-ch').on('postgres_changes', { event: '*', schema: 'public', table: 'contact_messages' }, () => loadMessages()).subscribe();
         }
 
         async function loadProducts() {
-            const { data } = await supabaseClient.from('products').select('*').order('id', { ascending: false });
+            const { data } = await db.from('products').select('*');
             if (data) {
                 displayProducts(data);
                 displayAdminProducts(data);
@@ -1298,25 +578,24 @@
 
         function displayProducts(products) {
             const container = document.getElementById('productsContainer');
-            container.innerHTML = products.map(p => `
+            container.innerHTML = (products || []).map(p => `
                 <div class="product-card">
                     <div class="product-image"><i class="fas fa-lightbulb"></i></div>
                     <div class="product-content">
                         <h3>${p.name}</h3>
-                        <div class="product-specs"><span>${p.watt || 'N/A'}</span> <span>MOQ: ${p.moq || 'N/A'}</span></div>
+                        <p>${p.watt || 'N/A'}</p>
                         <div class="product-price">₹${parseFloat(p.price).toFixed(2)}</div>
-                        <div class="product-actions"><a href="#contact" class="btn btn-primary">Enquire</a></div>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire</a>
                     </div>
                 </div>
             `).join('');
         }
 
         function displayAdminProducts(products) {
-            document.getElementById('productsTable').innerHTML = products.map(p => `
+            document.getElementById('productsTable').innerHTML = (products || []).map(p => `
                 <tr>
                     <td>${p.name}</td>
                     <td>₹${parseFloat(p.price).toFixed(2)}</td>
-                    <td>${p.category}</td>
                     <td><button class="btn btn-danger" onclick="deleteProduct(${p.id})">Delete</button></td>
                 </tr>
             `).join('');
@@ -1324,34 +603,30 @@
 
         async function deleteProduct(id) {
             if (confirm('Delete?')) {
-                await supabaseClient.from('products').delete().eq('id', id);
-                loadProducts();
+                await db.from('products').delete().eq('id', id);
             }
         }
 
         document.getElementById('productForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const { error } = await supabaseClient.from('products').insert([{
+            const { error } = await db.from('products').insert([{
                 name: document.getElementById('productName').value,
                 watt: document.getElementById('productWatt').value,
                 price: parseFloat(document.getElementById('productPrice').value),
-                moq: parseInt(document.getElementById('productMoq').value) || null,
                 category: document.getElementById('productCategory').value
             }]);
             if (!error) {
                 showNotification('✅ Product added!');
                 document.getElementById('productForm').reset();
-                loadProducts();
             }
         });
 
         async function loadDealers() {
-            const { data } = await supabaseClient.from('dealer_inquiries').select('*');
+            const { data } = await db.from('dealer_inquiries').select('*');
             document.getElementById('dealersTable').innerHTML = (data || []).map(d => `
                 <tr>
                     <td>${d.name}</td>
                     <td>${d.phone}</td>
-                    <td>${d.email}</td>
                     <td><button class="btn btn-danger" onclick="deleteDealer(${d.id})">Delete</button></td>
                 </tr>
             `).join('');
@@ -1359,14 +634,13 @@
 
         async function deleteDealer(id) {
             if (confirm('Delete?')) {
-                await supabaseClient.from('dealer_inquiries').delete().eq('id', id);
-                loadDealers();
+                await db.from('dealer_inquiries').delete().eq('id', id);
             }
         }
 
         async function loadMessages() {
-            const { data } = await supabaseClient.from('contact_messages').select('*');
-            document.getElementById('contactsTable').innerHTML = (data || []).map(m => `
+            const { data } = await db.from('contact_messages').select('*');
+            document.getElementById('messagesTable').innerHTML = (data || []).map(m => `
                 <tr>
                     <td>${m.name}</td>
                     <td>${m.phone}</td>
@@ -1378,19 +652,16 @@
 
         async function deleteMessage(id) {
             if (confirm('Delete?')) {
-                await supabaseClient.from('contact_messages').delete().eq('id', id);
-                loadMessages();
+                await db.from('contact_messages').delete().eq('id', id);
             }
         }
 
         document.getElementById('dealerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const { error } = await supabaseClient.from('dealer_inquiries').insert([{
+            const { error } = await db.from('dealer_inquiries').insert([{
                 name: document.getElementById('dealerName').value,
-                business: document.getElementById('dealerBusiness').value,
                 phone: document.getElementById('dealerPhone').value,
-                email: document.getElementById('dealerEmail').value,
-                location: document.getElementById('dealerLocation').value
+                email: document.getElementById('dealerEmail').value
             }]);
             if (!error) {
                 showNotification('✅ Application sent!');
@@ -1400,10 +671,9 @@
 
         document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const { error } = await supabaseClient.from('contact_messages').insert([{
+            const { error } = await db.from('contact_messages').insert([{
                 name: document.getElementById('contactName').value,
                 phone: document.getElementById('contactPhone').value,
-                email: document.getElementById('contactEmail').value,
                 message: document.getElementById('contactMessage').value
             }]);
             if (!error) {
@@ -1420,14 +690,14 @@
             setTimeout(() => div.remove(), 3000);
         }
 
-        function openAdminPanel(e) {
+        function openAdmin(e) {
             e.preventDefault();
             document.getElementById('passwordModal').classList.add('active');
         }
 
         function verifyPassword() {
             if (document.getElementById('adminPassword').value === 'admin123') {
-                closePasswordModal();
+                document.getElementById('passwordModal').classList.remove('active');
                 document.getElementById('adminModal').classList.add('active');
                 loadProducts();
                 loadDealers();
@@ -1437,7 +707,7 @@
             }
         }
 
-        function closePasswordModal() {
+        function closePassword() {
             document.getElementById('passwordModal').classList.remove('active');
         }
 
@@ -1446,22 +716,18 @@
         }
 
         function showTab(tab) {
-            document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.admin-nav-tab').forEach(b => b.classList.remove('active'));
-            document.getElementById(tab + '-tab').classList.add('active');
-            event.target.classList.add('active');
+            document.getElementById('products-tab').style.display = 'none';
+            document.getElementById('dealers-tab').style.display = 'none';
+            document.getElementById('messages-tab').style.display = 'none';
+            document.getElementById(tab + '-tab').style.display = 'block';
         }
-
-        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
 
         document.querySelectorAll('.category-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
                 document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 const category = btn.dataset.category;
-                let query = supabaseClient.from('products').select('*');
+                let query = db.from('products').select('*');
                 if (category !== 'all') query = query.eq('category', category);
                 const { data } = await query;
                 if (data) displayProducts(data);
