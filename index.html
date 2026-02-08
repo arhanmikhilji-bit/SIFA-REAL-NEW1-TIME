@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIFA Electricals - Premium LED Lighting Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Supabase JS Client -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
     <style>
-        /* ===== GLOBAL STYLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -42,7 +39,6 @@
             padding: 0 15px;
         }
 
-        /* ===== HEADER & NAVIGATION ===== */
         header {
             background-color: var(--primary);
             color: white;
@@ -151,7 +147,6 @@
             50% { opacity: 0.5; }
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -194,7 +189,6 @@
             color: var(--accent);
         }
 
-        /* Sections Common */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
@@ -215,7 +209,6 @@
             background-color: var(--secondary);
         }
 
-        /* About Section */
         .about {
             padding: 4rem 0;
             background-color: white;
@@ -274,7 +267,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Products Section */
         .products {
             padding: 4rem 0;
             background-color: #f5f7fa;
@@ -333,15 +325,12 @@
             font-size: 4rem;
             color: var(--secondary);
             overflow: hidden;
-            position: relative;
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            display: block;
-            background-color: white;
         }
 
         .product-image i {
@@ -356,7 +345,6 @@
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: var(--primary);
-            word-wrap: break-word;
         }
 
         .product-specs {
@@ -365,7 +353,6 @@
             margin-bottom: 1rem;
             font-size: 0.9rem;
             color: #666;
-            flex-wrap: wrap;
         }
 
         .product-price {
@@ -429,7 +416,6 @@
             background-color: #c0392b;
         }
 
-        /* Dealers Section */
         .dealers {
             padding: 4rem 0;
             background-color: white;
@@ -488,7 +474,6 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
         }
 
         .form-group input:focus,
@@ -504,88 +489,6 @@
             resize: vertical;
         }
 
-        /* Image Selection */
-        .image-selection {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            border: 2px solid #e0e0e0;
-        }
-
-        .image-type-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .image-type-option {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .image-type-option:hover {
-            border-color: var(--secondary);
-            background-color: #f9f9f9;
-        }
-
-        .image-type-option input[type="radio"] {
-            margin-right: 0.5rem;
-            cursor: pointer;
-            width: 18px;
-            height: 18px;
-        }
-
-        .image-type-option label {
-            cursor: pointer;
-            margin: 0;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .image-input-container {
-            display: none;
-            margin-top: 1rem;
-        }
-
-        .image-input-container.active {
-            display: block;
-        }
-
-        .image-input-container input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .image-input-container small {
-            display: block;
-            color: #666;
-            margin-top: 0.5rem;
-            line-height: 1.5;
-        }
-
-        .image-preview {
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .image-preview img {
-            max-width: 150px;
-            max-height: 150px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Gallery Section */
         .gallery {
             padding: 4rem 0;
             background-color: #f5f7fa;
@@ -602,7 +505,6 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
         }
 
         .gallery-item img {
@@ -616,7 +518,6 @@
             transform: scale(1.05);
         }
 
-        /* Contact Section */
         .contact {
             padding: 4rem 0;
             background-color: white;
@@ -676,7 +577,6 @@
             transform: translateY(-5px);
         }
 
-        /* Footer */
         footer {
             background-color: var(--primary);
             color: white;
@@ -722,7 +622,6 @@
             font-size: 0.9rem;
         }
 
-        /* Notifications */
         .notification {
             position: fixed;
             top: 20px;
@@ -744,10 +643,6 @@
             background-color: var(--danger);
         }
 
-        .notification.warning {
-            background-color: var(--warning);
-        }
-
         .notification.info {
             background-color: var(--secondary);
         }
@@ -763,7 +658,6 @@
             }
         }
 
-        /* Admin Panel Modal */
         .admin-modal {
             display: none;
             position: fixed;
@@ -814,15 +708,6 @@
             font-size: 2rem;
             cursor: pointer;
             padding: 0;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .admin-close-btn:hover {
-            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .admin-content {
@@ -908,7 +793,6 @@
             flex-wrap: wrap;
         }
 
-        /* Password Modal */
         .password-modal {
             display: none;
             position: fixed;
@@ -955,24 +839,9 @@
             margin: 0 1%;
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-        }
-
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
-            }
-
-            .sync-indicator {
-                display: none;
             }
 
             nav {
@@ -986,7 +855,6 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: all 0.3s ease;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
 
             nav.active {
@@ -1000,112 +868,18 @@
                 gap: 0;
             }
 
-            nav li {
-                width: 100%;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-
-            nav a {
-                display: block;
-                padding: 1rem 0;
-            }
-
-            .hero {
-                padding: 4rem 0;
+            .about-content {
+                grid-template-columns: 1fr;
             }
 
             .hero h2 {
                 font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .dealer-form-container {
-                padding: 2rem 1.5rem;
-            }
-
-            .about-info {
-                grid-template-columns: 1fr;
-            }
-
-            .admin-nav-tabs {
-                flex-direction: column;
-                gap: 0;
-            }
-
-            .admin-nav-tab {
-                width: 100%;
-                margin-bottom: 0;
-            }
-
-            .data-table {
-                font-size: 0.9rem;
-            }
-
-            .data-table th,
-            .data-table td {
-                padding: 0.7rem;
-            }
-
-            .action-btns {
-                flex-direction: column;
-            }
-
-            .action-btns .btn {
-                width: 100%;
-            }
-
-            .notification {
-                left: 20px;
-                right: 20px;
-                max-width: none;
-            }
-
-            .image-type-options {
-                grid-template-columns: 1fr;
-            }
-
-            .product-image {
-                height: 180px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 1.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-
-            .product-actions {
-                flex-direction: column;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-
-            .product-image {
-                height: 150px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -1136,24 +910,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <h2>Premium LED Lighting Solutions</h2>
-            <p>Energy-efficient, high-quality LED products for homes and businesses. We provide innovative lighting solutions with competitive pricing and excellent customer service.</p>
+            <p>Energy-efficient, high-quality LED products for homes and businesses.</p>
             <a href="#products" class="cta-button">View Our Products</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">About SIFA Electricals</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Our Vision</h3>
-                    <p>Our vision is to provide high-quality, energy-efficient, and sustainable LED lighting solutions to businesses and households across the market. We aim to help our customers reduce their electricity costs while contributing to environmental conservation through innovative and long-lasting lighting products.</p>
-                    <p>We strive to be a trusted partner for wholesalers and retailers by offering competitive pricing, better profit margins, and consistent product availability. Our goal is to become the most reliable and preferred supplier of LED lighting solutions in our region.</p>
+                    <p>Our vision is to provide high-quality, energy-efficient, and sustainable LED lighting solutions to businesses and households across the market.</p>
 
                     <div class="about-info">
                         <div class="info-item">
@@ -1179,140 +950,110 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SIFA Electricals LED Lighting Products">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SIFA">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products" id="products">
         <div class="container">
             <h2 class="section-title">Our Products</h2>
 
             <div class="product-categories">
-                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn active" data-category="all">All</button>
                 <button class="category-btn" data-category="color">Color Lighting</button>
-                <button class="category-btn" data-category="gamma">Gamma DOB LED</button>
-                <button class="category-btn" data-category="smart">Smart LED Lights</button>
+                <button class="category-btn" data-category="gamma">Gamma DOB</button>
+                <button class="category-btn" data-category="smart">Smart LED</button>
                 <button class="category-btn" data-category="music">Music Bulb</button>
-                <button class="category-btn" data-category="solar">Solar Lantern</button>
+                <button class="category-btn" data-category="solar">Solar</button>
             </div>
 
             <div class="products-grid" id="productsContainer">
-                <p style="grid-column: 1/-1; text-align: center; color: #999; padding: 2rem;">Loading products...</p>
+                <p style="grid-column: 1/-1; text-align: center; padding: 2rem;">Loading...</p>
             </div>
         </div>
     </section>
 
-    <!-- Dealers Section -->
     <section class="dealers" id="dealers">
         <div class="container">
             <h2 class="section-title">Dealers & Distributors</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #555;">Join our network of dealers and distributors to offer high-quality LED products to your customers. Enjoy competitive pricing, marketing support, and exclusive benefits.</p>
 
             <div class="dealer-benefits">
                 <div class="benefit-card">
                     <i class="fas fa-percentage"></i>
                     <h3>Better Profit Margins</h3>
-                    <p>Competitive pricing that ensures higher profitability for your business.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-shipping-fast"></i>
                     <h3>Timely Delivery</h3>
-                    <p>Consistent product availability with reliable and on-time delivery.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-headset"></i>
                     <h3>Dedicated Support</h3>
-                    <p>Technical and marketing support to help grow your business.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-medal"></i>
                     <h3>Quality Assurance</h3>
-                    <p>All products come with warranty and quality guarantee.</p>
                 </div>
             </div>
 
             <div class="dealer-form-container">
-                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Become a Dealer</h3>
+                <h3>Become a Dealer</h3>
                 <form id="dealerForm">
                     <div class="form-group">
-                        <label for="dealerName">Full Name *</label>
+                        <label>Full Name *</label>
                         <input type="text" id="dealerName" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="dealerBusiness">Business Name *</label>
+                        <label>Business Name *</label>
                         <input type="text" id="dealerBusiness" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="dealerPhone">Phone Number *</label>
+                        <label>Phone *</label>
                         <input type="tel" id="dealerPhone" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="dealerEmail">Email Address *</label>
+                        <label>Email *</label>
                         <input type="email" id="dealerEmail" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="dealerLocation">Business Location *</label>
+                        <label>Location *</label>
                         <input type="text" id="dealerLocation" required>
                     </div>
-
-                    <div class="form-group">
-                        <label for="dealerExperience">Years in Business</label>
-                        <select id="dealerExperience">
-                            <option value="">Select</option>
-                            <option value="0-2">0-2 Years</option>
-                            <option value="2-5">2-5 Years</option>
-                            <option value="5+">5+ Years</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="dealerMessage">Additional Message</label>
-                        <textarea id="dealerMessage" placeholder="Tell us about your business and requirements..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Submit Application</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Submit</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Our Gallery</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #555;">Explore our product range, manufacturing facility, and completed projects.</p>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="LED Bulb Manufacturing">
+                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="LED Products Display">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="LED Factory">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="LED Lighting Project">
+                    <img src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Smart LED Lights">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="LED Installation">
+                    <img src="https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
@@ -1320,14 +1061,13 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
-                    <p>We'd love to hear from you. Whether you have questions about our products, want to become a dealer, or need technical support, our team is here to help.</p>
 
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Address</h4>
-                                <p>Devnarayan Samudayik Bhawan ke piche, Iqbal Chowk, Sakatpura, Kota, Rajasthan</p>
+                                <p>Kota, Rajasthan</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1346,88 +1086,52 @@
                         </div>
                     </div>
 
-                    <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-form">
+                <div>
                     <h3>Send Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="contactName">Your Name *</label>
+                            <label>Your Name *</label>
                             <input type="text" id="contactName" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="contactPhone">Phone Number *</label>
+                            <label>Phone *</label>
                             <input type="tel" id="contactPhone" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="contactEmail">Email Address</label>
+                            <label>Email</label>
                             <input type="email" id="contactEmail">
                         </div>
-
                         <div class="form-group">
-                            <label for="contactSubject">Subject</label>
-                            <input type="text" id="contactSubject">
+                            <label>Message *</label>
+                            <textarea id="contactMessage" required></textarea>
                         </div>
-
-                        <div class="form-group">
-                            <label for="contactMessage">Message *</label>
-                            <textarea id="contactMessage" required placeholder="How can we help you?"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>SIFA Electricals</h3>
-                    <p>Premium LED lighting solutions manufacturer providing energy-efficient, high-quality products for homes and businesses across India.</p>
+                    <p>Premium LED lighting solutions manufacturer</p>
                 </div>
-
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
                         <li><a href="#products">Products</a></li>
-                        <li><a href="#dealers">Dealers</a></li>
                         <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Product Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="#products" onclick="filterProducts('color')">Color Lighting</a></li>
-                        <li><a href="#products" onclick="filterProducts('gamma')">Gamma DOB LED</a></li>
-                        <li><a href="#products" onclick="filterProducts('smart')">Smart LED Lights</a></li>
-                        <li><a href="#products" onclick="filterProducts('music')">Music Bulb</a></li>
-                        <li><a href="#products" onclick="filterProducts('solar')">Solar Lantern</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Kota, Rajasthan</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +91 XXXXX XXXXX</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@sifaelectricals.com</li>
                     </ul>
                 </div>
             </div>
@@ -1438,173 +1142,103 @@
         </div>
     </footer>
 
-    <!-- Password Modal -->
     <div id="passwordModal" class="password-modal">
         <div class="password-modal-content">
             <h2>🔒 Admin Access</h2>
-            <input type="password" id="adminPassword" placeholder="Enter admin password">
-            <button class="btn btn-success" onclick="verifyAdminPassword()">Verify</button>
+            <input type="password" id="adminPassword" placeholder="Password">
+            <button class="btn btn-success" onclick="verifyPassword()">Login</button>
             <button class="btn btn-secondary" onclick="closePasswordModal()">Cancel</button>
         </div>
     </div>
 
-    <!-- Admin Panel Modal -->
     <div id="adminModal" class="admin-modal">
         <div class="admin-container">
             <div class="admin-header">
-                <div class="container" style="justify-content: space-between; align-items: center;">
-                    <h1 style="margin: 0; font-size: 2rem;">SIFA Electricals - Admin Panel</h1>
-                    <button class="admin-close-btn" onclick="closeAdminPanel()">&times;</button>
+                <div class="container">
+                    <h1>Admin Panel</h1>
+                    <button class="admin-close-btn" onclick="closeAdmin()">&times;</button>
                 </div>
             </div>
 
             <div class="admin-content">
                 <div class="admin-nav-tabs">
-                    <button class="admin-nav-tab active" onclick="showAdminTab('products')">Products</button>
-                    <button class="admin-nav-tab" onclick="showAdminTab('dealers')">Dealer Inquiries</button>
-                    <button class="admin-nav-tab" onclick="showAdminTab('contacts')">Contact Messages</button>
+                    <button class="admin-nav-tab active" onclick="showTab('products')">Products</button>
+                    <button class="admin-nav-tab" onclick="showTab('dealers')">Dealers</button>
+                    <button class="admin-nav-tab" onclick="showTab('contacts')">Messages</button>
                 </div>
 
-                <!-- Products Tab -->
-                <div id="products-admin" class="admin-tab-content active">
-                    <h2>Product Management</h2>
-
+                <div id="products-tab" class="admin-tab-content active">
+                    <h2>Products</h2>
                     <form id="productForm">
                         <div class="form-group">
-                            <label for="productName">Product Name *</label>
+                            <label>Name *</label>
                             <input type="text" id="productName" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="productWatt">Wattage</label>
-                            <input type="text" id="productWatt" placeholder="e.g., 9 W">
+                            <label>Wattage</label>
+                            <input type="text" id="productWatt">
                         </div>
-
                         <div class="form-group">
-                            <label for="productPrice">Price (₹) *</label>
+                            <label>Price *</label>
                             <input type="number" id="productPrice" step="0.01" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="productMoq">MOQ (Minimum Order Quantity)</label>
-                            <input type="number" id="productMoq" placeholder="e.g., 100">
+                            <label>MOQ</label>
+                            <input type="number" id="productMoq">
                         </div>
-
                         <div class="form-group">
-                            <label for="productCategory">Category *</label>
+                            <label>Category *</label>
                             <select id="productCategory" required>
-                                <option value="">Select Category</option>
                                 <option value="color">Color Lighting</option>
-                                <option value="gamma">Gamma DOB LED</option>
-                                <option value="smart">Smart LED Lights</option>
+                                <option value="gamma">Gamma DOB</option>
+                                <option value="smart">Smart LED</option>
                                 <option value="music">Music Bulb</option>
-                                <option value="solar">Solar Lantern</option>
+                                <option value="solar">Solar</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="productDescription">Description</label>
-                            <textarea id="productDescription" placeholder="Product description..."></textarea>
-                        </div>
-
-                        <!-- Image Selection Section -->
-                        <div class="image-selection">
-                            <h3 style="margin-top: 0; color: var(--primary); margin-bottom: 1rem;">Product Image</h3>
-                            
-                            <div class="image-type-options">
-                                <div class="image-type-option">
-                                    <input type="radio" id="imageTypeFile" name="imageType" value="file" checked onchange="toggleImageInput('file')">
-                                    <label for="imageTypeFile">📁 Upload File</label>
-                                </div>
-                                <div class="image-type-option">
-                                    <input type="radio" id="imageTypeUrl" name="imageType" value="url" onchange="toggleImageInput('url')">
-                                    <label for="imageTypeUrl">🔗 Image URL</label>
-                                </div>
-                            </div>
-
-                            <!-- File Upload Container -->
-                            <div id="fileUploadContainer" class="image-input-container active">
-                                <input type="file" id="productImage" accept="image/*" onchange="previewImage('file')">
-                                <small>✓ Supported: JPG, PNG, WebP, GIF (Max 2MB)
-                                <br>✓ Recommended size: 400×300px or higher</small>
-                                <div class="image-preview" id="filePreview"></div>
-                            </div>
-
-                            <!-- URL Input Container -->
-                            <div id="urlInputContainer" class="image-input-container">
-                                <input type="url" id="productImageUrl" placeholder="https://example.com/image.jpg" onchange="previewImage('url')">
-                                <small>📝 Paste direct image URL. Must end with .jpg, .png, or .webp
-                                    <br>Example: https://example.com/led-bulb.jpg
-                                    <br>✓ Recommended size: 400×300px or higher</small>
-                                <div class="image-preview" id="urlPreview"></div>
-                            </div>
-                        </div>
-
                         <button type="submit" class="btn btn-success">Add Product</button>
-                        <button type="button" class="btn btn-secondary" onclick="resetProductForm()">Reset</button>
                     </form>
 
-                    <table class="data-table" id="productsTable">
+                    <table class="data-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Image</th>
                                 <th>Name</th>
-                                <th>Watt</th>
                                 <th>Price</th>
-                                <th>MOQ</th>
                                 <th>Category</th>
-                                <th>Actions</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody id="productsTableBody">
-                            <!-- Products will be loaded here -->
-                        </tbody>
+                        <tbody id="productsTable"></tbody>
                     </table>
                 </div>
 
-                <!-- Dealers Tab -->
-                <div id="dealers-admin" class="admin-tab-content">
+                <div id="dealers-tab" class="admin-tab-content">
                     <h2>Dealer Inquiries</h2>
-
-                    <table class="data-table" id="dealersTable">
+                    <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Business</th>
                                 <th>Phone</th>
                                 <th>Email</th>
-                                <th>Location</th>
-                                <th>Experience</th>
-                                <th>Date</th>
-                                <th>Actions</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody id="dealersTableBody">
-                            <!-- Dealer inquiries will be loaded here -->
-                        </tbody>
+                        <tbody id="dealersTable"></tbody>
                     </table>
                 </div>
 
-                <!-- Contacts Tab -->
-                <div id="contacts-admin" class="admin-tab-content">
+                <div id="contacts-tab" class="admin-tab-content">
                     <h2>Contact Messages</h2>
-
-                    <table class="data-table" id="contactsTable">
+                    <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Phone</th>
-                                <th>Email</th>
-                                <th>Subject</th>
                                 <th>Message</th>
-                                <th>Date</th>
-                                <th>Actions</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody id="contactsTableBody">
-                            <!-- Contact messages will be loaded here -->
-                        </tbody>
+                        <tbody id="contactsTable"></tbody>
                     </table>
                 </div>
             </div>
@@ -1612,706 +1246,229 @@
     </div>
 
     <script>
-        /* ========================================
-           SUPABASE CONFIGURATION
-           ======================================== */
+        const SUPABASE_URL = 'https://nzkpbehlbjheftyeskwu.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a3BiZWhsYmpoZWZ0eWVza3d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA1NjcwNDksImV4cCI6MjA4NjE0MzA0OX0.Ul-7C6TbbJQYOo_SKlYiUfNVWOI2PbDikcxhRd-oy98';
+        
+        // Fix: Only declare once
+        const { createClient } = window.supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-        const SUPABASE_URL = 'https://axhlzuqfvlsemwmqucmu.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4aGx6dXFmdmxzZW13bXF1Y211Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA1Njc5OTIsImV4cCI6MjA4NjE0Mzk5Mn0.kReI5ahz_DsNuCsAMGZ1DDmfEzWMLiyeHBgbvQotfF0'
-        let supabase;
         let isConnected = false;
 
-        async function initSupabase() {
+        async function init() {
             try {
-                const { createClient } = window.supabase;
-                supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-                
-                // Test connection
-                const { data, error } = await supabase.from('products').select('count', { count: 'exact' });
-                
-                if (error) {
-                    console.error('Supabase error:', error);
-                    throw error;
+                const { data, error } = await supabaseClient.from('products').select('count', { count: 'exact' });
+                if (!error) {
+                    isConnected = true;
+                    updateSync('connected');
+                    loadProducts();
+                    setupRealtime();
                 }
-                
-                isConnected = true;
-                updateSyncStatus('connected');
-                console.log('✅ Connected to Supabase');
-                
-                // Load products
-                loadAllProducts();
-                
-                // Subscribe to real-time changes
-                setupRealtimeSubscriptions();
-                
-            } catch (error) {
-                console.error('❌ Connection error:', error);
-                isConnected = false;
-                updateSyncStatus('offline');
-                showNotification('⚠️ Offline mode - Using local storage', 'warning');
-                loadDefaultProducts();
+            } catch (err) {
+                console.error('Connection error:', err);
+                updateSync('offline');
             }
         }
 
-        function updateSyncStatus(status) {
-            const syncDot = document.getElementById('syncDot');
-            const syncStatus = document.getElementById('syncStatus');
-            
+        function updateSync(status) {
+            const dot = document.getElementById('syncDot');
+            const text = document.getElementById('syncStatus');
             if (status === 'connected') {
-                syncDot.classList.remove('offline');
-                syncStatus.textContent = '🟢 Synced';
-            } else if (status === 'offline') {
-                syncDot.classList.add('offline');
-                syncStatus.textContent = '🔴 Offline';
+                dot.classList.remove('offline');
+                text.textContent = '🟢 Synced';
+            } else {
+                dot.classList.add('offline');
+                text.textContent = '🔴 Offline';
             }
         }
 
-        function setupRealtimeSubscriptions() {
-            try {
-                // Subscribe to product changes
-                supabase
-                    .channel('products_channel')
-                    .on(
-                        'postgres_changes',
-                        { event: '*', schema: 'public', table: 'products' },
-                        (payload) => {
-                            console.log('🔄 Products changed:', payload);
-                            loadAllProducts();
-                        }
-                    )
-                    .subscribe();
-
-                // Subscribe to dealer changes
-                supabase
-                    .channel('dealers_channel')
-                    .on(
-                        'postgres_changes',
-                        { event: '*', schema: 'public', table: 'dealer_inquiries' },
-                        (payload) => {
-                            console.log('🔄 Dealers changed:', payload);
-                            loadDealerInquiries();
-                        }
-                    )
-                    .subscribe();
-
-                // Subscribe to messages
-                supabase
-                    .channel('messages_channel')
-                    .on(
-                        'postgres_changes',
-                        { event: '*', schema: 'public', table: 'contact_messages' },
-                        (payload) => {
-                            console.log('🔄 Messages changed:', payload);
-                            loadContactMessages();
-                        }
-                    )
-                    .subscribe();
-            } catch (error) {
-                console.error('Error setting up subscriptions:', error);
-            }
+        function setupRealtime() {
+            supabaseClient.channel('changes').on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => loadProducts()).subscribe();
+            supabaseClient.channel('dealers-changes').on('postgres_changes', { event: '*', schema: 'public', table: 'dealer_inquiries' }, () => loadDealers()).subscribe();
+            supabaseClient.channel('messages-changes').on('postgres_changes', { event: '*', schema: 'public', table: 'contact_messages' }, () => loadMessages()).subscribe();
         }
 
-        /* ========================================
-           UTILITY FUNCTIONS
-           ======================================== */
-
-        function showNotification(message, type = 'success') {
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.textContent = message;
-            document.body.appendChild(notification);
-
-            setTimeout(() => {
-                notification.style.animation = 'slideIn 0.3s ease reverse';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-        }
-
-        function sanitizeInput(input) {
-            const div = document.createElement('div');
-            div.textContent = input;
-            return div.innerHTML;
-        }
-
-        function formatDate(date) {
-            return new Date(date).toLocaleDateString('en-IN', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-        }
-
-        /* ========================================
-           DEFAULT PRODUCTS
-           ======================================== */
-
-        function loadDefaultProducts() {
-            const defaultProducts = [
-                { id: 1, name: "NIGHT LED BULB", watt: "0.5 W", price: 8.50, moq: 100, category: "color", description: "Low wattage night bulb", image: null },
-                { id: 2, name: "DEEP LIGHT (white)", watt: "5 W", price: 29.00, moq: 50, category: "color", description: "81mm diameter", image: null },
-                { id: 3, name: "DEEP LIGHT (color)", watt: "5 W", price: 32.00, moq: 50, category: "color", description: "Color changing", image: null },
-                { id: 4, name: "LED BULB (ECO)57mm", watt: "9 W", price: 9.75, moq: 200, category: "color", description: "Economy series", image: null },
-                { id: 5, name: "LED BULB (ECO)65mm", watt: "12 W", price: 21.75, moq: 100, category: "color", description: "Economy series", image: null }
-            ];
-            displayProducts(defaultProducts);
-        }
-
-        /* ========================================
-           PRODUCT FUNCTIONS
-           ======================================== */
-
-        async function loadAllProducts() {
-            if (!isConnected || !supabase) {
-                loadDefaultProducts();
-                return;
-            }
-            
-            try {
-                const { data, error } = await supabase
-                    .from('products')
-                    .select('*')
-                    .order('id', { ascending: false });
-
-                if (error) {
-                    console.error('Error loading products:', error);
-                    loadDefaultProducts();
-                    return;
-                }
-
-                if (data && data.length > 0) {
-                    displayProducts(data);
-                    displayAdminProducts(data);
-                } else {
-                    loadDefaultProducts();
-                }
-            } catch (error) {
-                console.error('Error loading products:', error);
-                loadDefaultProducts();
+        async function loadProducts() {
+            const { data } = await supabaseClient.from('products').select('*').order('id', { ascending: false });
+            if (data) {
+                displayProducts(data);
+                displayAdminProducts(data);
             }
         }
 
         function displayProducts(products) {
-            const productsContainer = document.getElementById('productsContainer');
-            productsContainer.innerHTML = '';
-
-            if (!products || products.length === 0) {
-                productsContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #999; padding: 2rem;">No products available</p>';
-                return;
-            }
-
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                
-                let imageHtml;
-                if (product.image) {
-                    imageHtml = `<img src="${product.image}" alt="${sanitizeInput(product.name)}">`;
-                } else {
-                    imageHtml = '<i class="fas fa-lightbulb"></i>';
-                }
-
-                productCard.innerHTML = `
-                    <div class="product-image">
-                        ${imageHtml}
-                    </div>
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = products.map(p => `
+                <div class="product-card">
+                    <div class="product-image"><i class="fas fa-lightbulb"></i></div>
                     <div class="product-content">
-                        <h3>${sanitizeInput(product.name)}</h3>
-                        <div class="product-specs">
-                            <span>${sanitizeInput(product.watt || 'N/A')}</span>
-                            <span>MOQ: ${product.moq || 'N/A'}</span>
-                        </div>
-                        <div class="product-price">₹${parseFloat(product.price).toFixed(2)}</div>
-                        <div class="product-actions">
-                            <a href="#contact" class="btn btn-primary">Enquire Now</a>
-                        </div>
+                        <h3>${p.name}</h3>
+                        <div class="product-specs"><span>${p.watt || 'N/A'}</span> <span>MOQ: ${p.moq || 'N/A'}</span></div>
+                        <div class="product-price">₹${parseFloat(p.price).toFixed(2)}</div>
+                        <div class="product-actions"><a href="#contact" class="btn btn-primary">Enquire</a></div>
                     </div>
-                `;
-                productsContainer.appendChild(productCard);
-            });
+                </div>
+            `).join('');
         }
 
         function displayAdminProducts(products) {
-            const tbody = document.getElementById('productsTableBody');
-            tbody.innerHTML = '';
-
-            if (!products) return;
-
-            products.forEach(product => {
-                const imageCell = product.image 
-                    ? `<img src="${product.image}" style="max-width: 50px; max-height: 50px; border-radius: 4px;">` 
-                    : '<span style="color: #999;">No image</span>';
-                
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${product.id}</td>
-                    <td>${imageCell}</td>
-                    <td>${sanitizeInput(product.name)}</td>
-                    <td>${sanitizeInput(product.watt || '-')}</td>
-                    <td>₹${parseFloat(product.price).toFixed(2)}</td>
-                    <td>${product.moq || '-'}</td>
-                    <td>${product.category}</td>
-                    <td class="action-btns">
-                        <button type="button" class="btn btn-danger" onclick="deleteProduct(${product.id})" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Delete</button>
-                    </td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-
-        document.getElementById('productForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            if (!isConnected) {
-                showNotification('❌ Not connected to server', 'error');
-                return;
-            }
-
-            const imageType = document.querySelector('input[name="imageType"]:checked').value;
-            let imageData = null;
-
-            if (imageType === 'url') {
-                imageData = document.getElementById('productImageUrl').value.trim();
-                if (!imageData) {
-                    showNotification('❌ Please enter image URL', 'error');
-                    return;
-                }
-            } else if (imageType === 'file') {
-                const fileInput = document.getElementById('productImage');
-                if (fileInput.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = async (e) => {
-                        imageData = e.target.result;
-                        await addProduct(imageData);
-                    };
-                    reader.readAsDataURL(fileInput.files[0]);
-                    return;
-                }
-            }
-
-            await addProduct(imageData);
-        });
-
-        async function addProduct(imageData) {
-            try {
-                const { data, error } = await supabase
-                    .from('products')
-                    .insert([{
-                        name: sanitizeInput(document.getElementById('productName').value),
-                        watt: sanitizeInput(document.getElementById('productWatt').value),
-                        price: parseFloat(document.getElementById('productPrice').value),
-                        moq: parseInt(document.getElementById('productMoq').value) || null,
-                        category: document.getElementById('productCategory').value,
-                        description: sanitizeInput(document.getElementById('productDescription').value),
-                        image: imageData
-                    }])
-                    .select();
-
-                if (error) throw error;
-
-                showNotification('✅ Product added successfully!', 'success');
-                document.getElementById('productForm').reset();
-                document.getElementById('filePreview').innerHTML = '';
-                document.getElementById('urlPreview').innerHTML = '';
-                
-                loadAllProducts();
-            } catch (error) {
-                console.error('Error adding product:', error);
-                showNotification('❌ Error adding product: ' + error.message, 'error');
-            }
+            document.getElementById('productsTable').innerHTML = products.map(p => `
+                <tr>
+                    <td>${p.name}</td>
+                    <td>₹${parseFloat(p.price).toFixed(2)}</td>
+                    <td>${p.category}</td>
+                    <td><button class="btn btn-danger" onclick="deleteProduct(${p.id})">Delete</button></td>
+                </tr>
+            `).join('');
         }
 
         async function deleteProduct(id) {
-            if (!confirm('Are you sure?')) return;
-
-            try {
-                const { error } = await supabase
-                    .from('products')
-                    .delete()
-                    .eq('id', id);
-
-                if (error) throw error;
-
-                showNotification('✅ Product deleted!', 'success');
-                loadAllProducts();
-            } catch (error) {
-                console.error('Error deleting product:', error);
-                showNotification('❌ Error deleting product', 'error');
+            if (confirm('Delete?')) {
+                await supabaseClient.from('products').delete().eq('id', id);
+                loadProducts();
             }
         }
 
-        function resetProductForm() {
-            document.getElementById('productForm').reset();
-            document.getElementById('filePreview').innerHTML = '';
-            document.getElementById('urlPreview').innerHTML = '';
-            document.getElementById('imageTypeFile').checked = true;
-            toggleImageInput('file');
-        }
-
-        /* ========================================
-           IMAGE TOGGLE & PREVIEW
-           ======================================== */
-
-        function toggleImageInput(type) {
-            const fileContainer = document.getElementById('fileUploadContainer');
-            const urlContainer = document.getElementById('urlInputContainer');
-            
-            if (type === 'file') {
-                fileContainer.classList.add('active');
-                urlContainer.classList.remove('active');
-            } else {
-                fileContainer.classList.remove('active');
-                urlContainer.classList.add('active');
-            }
-        }
-
-        function previewImage(type) {
-            const filePreview = document.getElementById('filePreview');
-            const urlPreview = document.getElementById('urlPreview');
-
-            if (type === 'file') {
-                const fileInput = document.getElementById('productImage');
-                const file = fileInput.files[0];
-                
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        filePreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
-                    };
-                    reader.readAsDataURL(file);
-                } else {
-                    filePreview.innerHTML = '';
-                }
-            } else {
-                const urlInput = document.getElementById('productImageUrl').value;
-                if (urlInput) {
-                    urlPreview.innerHTML = `<img src="${urlInput}" alt="Preview" onerror="this.parentElement.innerHTML='<div style=\\"color: #999;\\">Failed to load</div>'">`;
-                } else {
-                    urlPreview.innerHTML = '';
-                }
-            }
-        }
-
-        /* ========================================
-           DEALER INQUIRIES
-           ======================================== */
-
-        async function loadDealerInquiries() {
-            if (!isConnected || !supabase) return;
-
-            try {
-                const { data, error } = await supabase
-                    .from('dealer_inquiries')
-                    .select('*')
-                    .order('id', { ascending: false });
-
-                if (error) throw error;
-
-                displayAdminDealerInquiries(data);
-            } catch (error) {
-                console.error('Error loading dealers:', error);
-            }
-        }
-
-        function displayAdminDealerInquiries(inquiries) {
-            const tbody = document.getElementById('dealersTableBody');
-            tbody.innerHTML = '';
-
-            if (!inquiries) return;
-
-            inquiries.forEach((inquiry) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${sanitizeInput(inquiry.name)}</td>
-                    <td>${sanitizeInput(inquiry.business)}</td>
-                    <td>${sanitizeInput(inquiry.phone)}</td>
-                    <td>${sanitizeInput(inquiry.email)}</td>
-                    <td>${sanitizeInput(inquiry.location)}</td>
-                    <td>${inquiry.experience || '-'}</td>
-                    <td>${formatDate(inquiry.created_at)}</td>
-                    <td class="action-btns">
-                        <button type="button" class="btn btn-danger" onclick="deleteDealerInquiry(${inquiry.id})" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Delete</button>
-                    </td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-
-        async function deleteDealerInquiry(id) {
-            if (!confirm('Are you sure?')) return;
-
-            try {
-                const { error } = await supabase
-                    .from('dealer_inquiries')
-                    .delete()
-                    .eq('id', id);
-
-                if (error) throw error;
-
-                showNotification('✅ Deleted!', 'success');
-                loadDealerInquiries();
-            } catch (error) {
-                console.error('Error:', error);
-                showNotification('❌ Error deleting', 'error');
-            }
-        }
-
-        document.getElementById('dealerForm').addEventListener('submit', async function (e) {
+        document.getElementById('productForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-
-            if (!isConnected) {
-                showNotification('❌ Not connected to server', 'error');
-                return;
-            }
-
-            try {
-                const { error } = await supabase
-                    .from('dealer_inquiries')
-                    .insert([{
-                        name: sanitizeInput(document.getElementById('dealerName').value),
-                        business: sanitizeInput(document.getElementById('dealerBusiness').value),
-                        phone: sanitizeInput(document.getElementById('dealerPhone').value),
-                        email: sanitizeInput(document.getElementById('dealerEmail').value),
-                        location: sanitizeInput(document.getElementById('dealerLocation').value),
-                        experience: document.getElementById('dealerExperience').value
-                    }]);
-
-                if (error) throw error;
-
-                showNotification('✅ Application submitted!', 'success');
-                this.reset();
-            } catch (error) {
-                console.error('Error:', error);
-                showNotification('❌ Error submitting application', 'error');
+            const { error } = await supabaseClient.from('products').insert([{
+                name: document.getElementById('productName').value,
+                watt: document.getElementById('productWatt').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                moq: parseInt(document.getElementById('productMoq').value) || null,
+                category: document.getElementById('productCategory').value
+            }]);
+            if (!error) {
+                showNotification('✅ Product added!');
+                document.getElementById('productForm').reset();
+                loadProducts();
             }
         });
 
-        /* ========================================
-           CONTACT MESSAGES
-           ======================================== */
+        async function loadDealers() {
+            const { data } = await supabaseClient.from('dealer_inquiries').select('*');
+            document.getElementById('dealersTable').innerHTML = (data || []).map(d => `
+                <tr>
+                    <td>${d.name}</td>
+                    <td>${d.phone}</td>
+                    <td>${d.email}</td>
+                    <td><button class="btn btn-danger" onclick="deleteDealer(${d.id})">Delete</button></td>
+                </tr>
+            `).join('');
+        }
 
-        async function loadContactMessages() {
-            if (!isConnected || !supabase) return;
-
-            try {
-                const { data, error } = await supabase
-                    .from('contact_messages')
-                    .select('*')
-                    .order('id', { ascending: false });
-
-                if (error) throw error;
-
-                displayAdminContactMessages(data);
-            } catch (error) {
-                console.error('Error loading messages:', error);
+        async function deleteDealer(id) {
+            if (confirm('Delete?')) {
+                await supabaseClient.from('dealer_inquiries').delete().eq('id', id);
+                loadDealers();
             }
         }
 
-        function displayAdminContactMessages(messages) {
-            const tbody = document.getElementById('contactsTableBody');
-            tbody.innerHTML = '';
-
-            if (!messages) return;
-
-            messages.forEach((message) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${sanitizeInput(message.name)}</td>
-                    <td>${sanitizeInput(message.phone)}</td>
-                    <td>${sanitizeInput(message.email || '-')}</td>
-                    <td>${sanitizeInput(message.subject || '-')}</td>
-                    <td>${sanitizeInput(message.message.substring(0, 30))}...</td>
-                    <td>${formatDate(message.created_at)}</td>
-                    <td class="action-btns">
-                        <button type="button" class="btn btn-danger" onclick="deleteContactMessage(${message.id})" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Delete</button>
-                    </td>
-                `;
-                tbody.appendChild(row);
-            });
+        async function loadMessages() {
+            const { data } = await supabaseClient.from('contact_messages').select('*');
+            document.getElementById('contactsTable').innerHTML = (data || []).map(m => `
+                <tr>
+                    <td>${m.name}</td>
+                    <td>${m.phone}</td>
+                    <td>${m.message.substring(0, 30)}...</td>
+                    <td><button class="btn btn-danger" onclick="deleteMessage(${m.id})">Delete</button></td>
+                </tr>
+            `).join('');
         }
 
-        async function deleteContactMessage(id) {
-            if (!confirm('Are you sure?')) return;
-
-            try {
-                const { error } = await supabase
-                    .from('contact_messages')
-                    .delete()
-                    .eq('id', id);
-
-                if (error) throw error;
-
-                showNotification('✅ Deleted!', 'success');
-                loadContactMessages();
-            } catch (error) {
-                console.error('Error:', error);
-                showNotification('❌ Error deleting', 'error');
+        async function deleteMessage(id) {
+            if (confirm('Delete?')) {
+                await supabaseClient.from('contact_messages').delete().eq('id', id);
+                loadMessages();
             }
         }
 
-        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        document.getElementById('dealerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-
-            if (!isConnected) {
-                showNotification('❌ Not connected to server', 'error');
-                return;
-            }
-
-            try {
-                const { error } = await supabase
-                    .from('contact_messages')
-                    .insert([{
-                        name: sanitizeInput(document.getElementById('contactName').value),
-                        phone: sanitizeInput(document.getElementById('contactPhone').value),
-                        email: sanitizeInput(document.getElementById('contactEmail').value),
-                        subject: sanitizeInput(document.getElementById('contactSubject').value),
-                        message: sanitizeInput(document.getElementById('contactMessage').value)
-                    }]);
-
-                if (error) throw error;
-
-                showNotification('✅ Message sent!', 'success');
-                this.reset();
-            } catch (error) {
-                console.error('Error:', error);
-                showNotification('❌ Error sending message', 'error');
+            const { error } = await supabaseClient.from('dealer_inquiries').insert([{
+                name: document.getElementById('dealerName').value,
+                business: document.getElementById('dealerBusiness').value,
+                phone: document.getElementById('dealerPhone').value,
+                email: document.getElementById('dealerEmail').value,
+                location: document.getElementById('dealerLocation').value
+            }]);
+            if (!error) {
+                showNotification('✅ Application sent!');
+                e.target.reset();
             }
         });
 
-        /* ========================================
-           ADMIN PANEL
-           ======================================== */
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const { error } = await supabaseClient.from('contact_messages').insert([{
+                name: document.getElementById('contactName').value,
+                phone: document.getElementById('contactPhone').value,
+                email: document.getElementById('contactEmail').value,
+                message: document.getElementById('contactMessage').value
+            }]);
+            if (!error) {
+                showNotification('✅ Message sent!');
+                e.target.reset();
+            }
+        });
 
-        const ADMIN_PASSWORD = 'admin123';
+        function showNotification(msg) {
+            const div = document.createElement('div');
+            div.className = 'notification success';
+            div.textContent = msg;
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 3000);
+        }
 
         function openAdminPanel(e) {
             e.preventDefault();
             document.getElementById('passwordModal').classList.add('active');
         }
 
-        function closePasswordModal() {
-            document.getElementById('passwordModal').classList.remove('active');
-            document.getElementById('adminPassword').value = '';
-        }
-
-        function verifyAdminPassword() {
-            const password = document.getElementById('adminPassword').value;
-            if (password === ADMIN_PASSWORD) {
+        function verifyPassword() {
+            if (document.getElementById('adminPassword').value === 'admin123') {
                 closePasswordModal();
                 document.getElementById('adminModal').classList.add('active');
-                loadAllProducts();
-                loadDealerInquiries();
-                loadContactMessages();
+                loadProducts();
+                loadDealers();
+                loadMessages();
             } else {
-                showNotification('❌ Incorrect password!', 'error');
+                alert('❌ Wrong password!');
             }
         }
 
-        document.getElementById('adminPassword').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') verifyAdminPassword();
-        });
+        function closePasswordModal() {
+            document.getElementById('passwordModal').classList.remove('active');
+        }
 
-        function closeAdminPanel() {
+        function closeAdmin() {
             document.getElementById('adminModal').classList.remove('active');
         }
 
-        function showAdminTab(tabName) {
-            document.querySelectorAll('.admin-tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.admin-nav-tab').forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabName + '-admin').classList.add('active');
+        function showTab(tab) {
+            document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.admin-nav-tab').forEach(b => b.classList.remove('active'));
+            document.getElementById(tab + '-tab').classList.add('active');
             event.target.classList.add('active');
         }
 
-        /* ========================================
-           MOBILE MENU
-           ======================================== */
-
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mainNav.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mainNav').classList.toggle('active');
         });
 
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-
-        /* ========================================
-           MODAL CLOSE HANDLERS
-           ======================================== */
-
-        document.getElementById('adminModal').addEventListener('click', function (e) {
-            if (e.target === this) closeAdminPanel();
-        });
-
-        document.getElementById('passwordModal').addEventListener('click', function (e) {
-            if (e.target === this) closePasswordModal();
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                closeAdminPanel();
-                closePasswordModal();
-            }
-        });
-
-        /* ========================================
-           CATEGORY FILTERING
-           ======================================== */
-
-        document.querySelectorAll('.category-btn').forEach(button => {
-            button.addEventListener('click', async () => {
-                document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const category = button.dataset.category;
-                
-                if (!isConnected || !supabase) {
-                    loadDefaultProducts();
-                    return;
-                }
-
-                try {
-                    let query = supabase.from('products').select('*');
-                    
-                    if (category !== 'all') {
-                        query = query.eq('category', category);
-                    }
-
-                    const { data, error } = await query;
-                    if (error) throw error;
-
-                    displayProducts(data);
-                } catch (error) {
-                    console.error('Error filtering:', error);
-                }
-            });
-        });
-
-        function filterProducts(category) {
-            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-            const btn = document.querySelector(`[data-category="${category}"]`);
-            if (btn) {
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                btn.click();
-            }
-        }
+                const category = btn.dataset.category;
+                let query = supabaseClient.from('products').select('*');
+                if (category !== 'all') query = query.eq('category', category);
+                const { data } = await query;
+                if (data) displayProducts(data);
+            });
+        });
 
-        /* ========================================
-           INITIALIZATION
-           ======================================== */
-
-        setTimeout(() => {
-            initSupabase();
-        }, 500);
+        init();
     </script>
 </body>
 
